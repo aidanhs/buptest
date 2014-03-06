@@ -1,0 +1,1 @@
+python -c 'from bup import hashsplit, _hashsplit; buf = hashsplit.Buf(); buf.put(open("bup/_helpers.so").read()); print buf.peek(4); print [(len(x),x[0:5].tobytes(),y) for (x,y) in _hashsplit._splitbuf(buf, 5, 5)]'
